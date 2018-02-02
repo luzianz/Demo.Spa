@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Fetch api data with Vue</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.js"></script>
+		<script src="js/index.js"></script>
+	</head
+	<body>
+		<div id="app">
+			<section class="input">
+				<label for="contentToAdd">Note</label>
+				<input id="contentToAdd" type="text" v-model="contentToAdd" placeholder="content"/>
+				<button @click="addNote">Add Note</button>
+			</section>
+			<button @click="getNotes">Get Notes</button>
+			<ul>
+				<li v-for="note in notes">
+					<span v-text="note.content"></span>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
